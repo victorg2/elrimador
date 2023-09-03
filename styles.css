@@ -1,0 +1,117 @@
+/* Colores Base */
+:root {
+    --primary-color: #003366;
+    --secondary-color-dark: #005099;
+    --secondary-color-medium: #336699;
+    --neutral-light: #f4f4f4;
+    --neutral-dark: #333333;
+    --neutral-medium: #666666;
+    --neutral-border: #999999;
+    --alert-color: #FF4136;
+    --success-color: #2ECC40;
+}
+
+/* Colores para las sílabas */
+.syllable-1 { background-color: #FFF3B0; } /* Color 1 */
+.syllable-2 { background-color: #FFE082; } /* Color 2 */
+
+/* Colores para las sílabas de la última palabra */
+.last-word-aguda-1 { background-color: #81AED5; } /* Color 1 para palabras agudas */
+.last-word-aguda-2 { background-color: #739CBF; } /* Color 2 para palabras agudas */
+
+.last-word-llana-1 { background-color: #AED581; } /* Color 1 para palabras llanas */
+.last-word-llana-2 { background-color: #A2C573; } /* Color 2 para palabras llanas */
+
+.last-word-esdrujula-1 { background-color: #D581AE; } /* Color 1 para palabras esdrújulas */
+.last-word-esdrujula-2 { background-color: #C573A2; } /* Color 2 para palabras esdrújulas */
+
+/* Estilos para el div editable */
+.editable-div {
+    border: 2px solid var(--neutral-border);
+	border-radius: 4px;
+    transition: border-color 0.3s;
+    padding: 10px;
+    width: 300px;
+    height: 150px;
+    overflow-y: auto; /* Para que tenga scroll si el contenido es muy largo */
+    white-space: pre-wrap; /* Para que respete los saltos de línea y espacios */
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--neutral-light);
+    color: var(--neutral-dark);
+    padding: 20px;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+}
+
+h3 {
+    color: var(--primary-color);
+    margin: 0 0 15px 0; /* Elimina el margen superior y ajusta el margen inferior */
+    padding: 0; /* Asegura que no haya padding adicional */
+}
+	
+.container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between; /* Asegura que los divs estén separados */
+    align-items: start; /* Alinea los divs en la parte superior */
+	background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+	flex-wrap: wrap; /* Esto permite que los div se coloquen uno debajo del otro si no hay suficiente espacio */
+}
+
+.container > div {
+	flex: 1;
+    min-width: 300px; /* Esto asegura un ancho mínimo para cada div */
+    padding: 0; /* Elimina cualquier padding adicional */
+    box-sizing: border-box; /* Asegura que el padding y el borde estén incluidos en el ancho total */
+}
+
+.editable-div, #coloredTextOutput {
+    flex: 1; /* Ocupa el mismo espacio */
+    margin: 0 10px; /* Añade un pequeño margen a los lados para separarlos */
+	width: 100%; /* Asegura que los div ocupen todo el ancho disponible */
+	box-sizing: border-box; /* Asegura que el padding y el borde estén incluidos en el ancho total */
+}
+
+.editable-div:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.consonant-rhyme {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.asonant-rhyme {
+    font-style: italic;
+    color: var(--neutral-medium);
+}
+
+.line-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px; /* Espacio entre líneas */
+}
+
+.line-text {
+    flex: 10;
+}
+
+.line-info {
+    flex: 1; /* Ocupa 1 parte del espacio disponible */
+    text-align: center;
+	border: 1px solid var(--neutral-border); /* Añade un borde ligero */
+	padding: 0px 2px;
+    border-radius: 4px; /* Añade bordes redondeados para un aspecto más suave */
+    margin-right: 10px; /* Añade un margen a la derecha para separarlo del texto */
+}
